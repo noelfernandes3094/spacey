@@ -1,2 +1,4 @@
 # spacey
-SpaceX is an experimental Frontend mini project
+SpaceX is an experimental Next.js project with Next-auth sessions
+
+#Future Updates
