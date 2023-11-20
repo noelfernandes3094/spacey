@@ -1,0 +1,52 @@
+.pagination {
+    color: white;
+
+    li {
+        font-size: 14px;
+
+        &:not(:last-child) {
+            margin-right: 20px;
+        }
+
+        a {
+            transition: all 0.3s ease;
+            &:hover {
+                color: #00FF8B;
+            }
+            &:not(.prev):not(.next){
+                border: 1px solid white;
+                display: inline-block;
+                width: 20px;
+                padding: 5px;
+                text-align: center;
+                width: 32px;
+                &:hover {
+                    background-color: #00FF8B;
+                    color: black;
+                    border-color: #00FF8B;
+                }
+            }
+
+            &[aria-current="page"] {
+                background-color: #00FF8B;
+                color: black;
+                border-color: #00FF8B !important;
+            }
+
+            &[aria-disabled="true"] {
+                opacity: 0.6;
+                cursor: not-allowed;
+                &:hover {
+                    color: inherit;
+                }
+            }
+        }
+
+        /* &.active a {
+            background-color: #00FF8B;
+            color: black;
+            border-color: #00FF8B;
+        } */
+    
+    }
+}

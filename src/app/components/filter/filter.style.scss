@@ -1,0 +1,63 @@
+.filter {
+    width: 180px;
+
+    .filter-options {
+        padding: 8px;
+        margin-top: 2px;
+        left: 0;
+        right: 0;
+        background-color: white;
+        box-shadow: -1px 0px 7px 1px #5db18e;
+        visibility: hidden;
+        opacity: 0;
+        z-index: 1;
+        &.show {
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+    h6 {
+        font-size: 0.75rem;
+        margin-bottom: 4px;
+    }
+
+    form {
+        font-size: 0.875rem;
+
+        input {
+            -webkit-appearance: none;
+        }
+        label{
+            opacity: 0.5;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            cursor: pointer;
+            &.active {
+                opacity: 1;
+            }
+        }
+    }
+    button {
+        background-color: transparent;
+        color: white;
+        border: none;
+        padding: 5px 5px 5px 0;
+        border-bottom: 1px solid white;
+        border-radius: 0;
+        transition: all 0.3s ease;
+
+        img{
+            width: 16px;
+            pointer-events: none;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        &.active {
+            img {
+                transform: rotate(180deg);
+            }
+        }
+       /*  &:hover {
+            color: black;
+        } */
+    }
+}

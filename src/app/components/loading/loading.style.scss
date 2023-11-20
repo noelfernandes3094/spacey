@@ -1,0 +1,23 @@
+.loader {
+    color: white;
+    .spinner-grow {
+      display: inline-block;
+      width: 20px;
+      height:  20px;
+      vertical-align: text-bottom;
+      background-color: #00FF8B;
+      // stylelint-disable-next-line property-blacklist
+      border-radius: 50%;
+      opacity: 0;
+      animation: spinner-grow .75s linear infinite;
+    
+        @keyframes spinner-grow {
+            0% {
+                transform: scale(0);
+            }
+            50% {
+                opacity: 1;
+            }
+        }
+    }
+}

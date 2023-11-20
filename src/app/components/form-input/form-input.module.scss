@@ -1,0 +1,30 @@
+.field_wrapper {
+    &:not(:last-child) {
+        margin-bottom: 30px;
+    }
+
+    input:not([type="radio"]):not([type="checkbox"]):not([type="checkbox"]) {
+        border-bottom: 1px solid white;
+        width: 100%;
+        padding: 5px 20px 5px 0;
+        color: white;
+
+        &:focus {
+            box-shadow: none;
+            outline: none;
+        }
+    }
+
+    input[type="search"]{
+        background-image: url('../../../../public/search.svg');
+        background-size: 26px;
+        background-repeat: no-repeat;
+        background-position: center right;  
+        &::-webkit-search-decoration,
+        &::-webkit-search-cancel-button,
+        &::-webkit-search-results-button,
+        &::-webkit-search-results-decoration {
+            -webkit-appearance:none;
+        }
+    }
+}

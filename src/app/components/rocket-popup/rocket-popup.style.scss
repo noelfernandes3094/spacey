@@ -1,0 +1,51 @@
+.rocket-details-pop {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    padding: 10px;
+
+    .close {
+        z-index: 1;
+        top: 10px;
+        right: 10px;
+        svg {
+            rect,path {
+                stroke: black;
+                transition: all 0.3s ease;
+            }
+        }
+        &:hover svg {
+            rect, path {
+                stroke: #00FF8B;
+            }
+        } 
+    }
+
+
+    .wrapper {
+        padding: 60px;
+        max-width: 800px;
+
+        @media (max-width: 767.98) {
+            padding: 50px;
+        }
+
+        
+        @media (max-width: 500.98px) {
+            align-items: flex-start;
+            padding: 60px 10px 50px;
+        }
+    }
+
+    .rocket-details {
+        font-size: 15px;
+    }
+
+    @media (max-height: 500px) {
+        align-items: flex-start;
+    }
+    
+}

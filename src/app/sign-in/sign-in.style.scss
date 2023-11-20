@@ -1,0 +1,45 @@
+.sign-in {
+    > div {
+        min-height: calc(100vh - 70px);
+    }
+
+    .wrapper {
+        button:not(.log-out) {
+            border: 1px solid black;
+            padding: 10px 10px 10px 45px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            transform: scale(0.99);
+            perspective: 10px;
+            perspective-origin: center;
+            background-repeat: no-repeat;
+            background-size: 30px;
+            background-position: 10px;
+    
+            &.github{
+                background-image: url('../../../public/github.png');
+                background-color: black;
+                color: white;
+            }
+            &.google{
+                background-image: url('../../../public/google.png');
+            }
+            &.linkedin{
+                background-color: #0a66c2;
+                border-color: #0a66c2;
+                color: white;
+                background-image: url('../../../public/linkedin-icon.svg');
+            }
+    
+            &:not(:last-child) {
+                margin-bottom: 20px;
+            }
+    
+            @media ( min-width: 1025px ){
+                &:hover {
+                    box-shadow: 1px 1px 3px 0px rgba($color: #000000, $alpha: 0.25);
+                }
+            }
+        }
+    }
+}

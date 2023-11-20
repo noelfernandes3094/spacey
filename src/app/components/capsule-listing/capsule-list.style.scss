@@ -1,0 +1,33 @@
+.capsule-listing {
+    padding: 100px 0 50px;
+    background-color: black;
+    min-height: calc(100vh - 70px);
+
+    h3, .result-not-found {
+        color: white;
+    }
+    
+    .filter-wrapper {
+        padding-bottom: 50px;
+
+        > div:first-child {
+            max-width: 500px;
+            width: 100%;
+        }
+        /* input {
+            filter: invert(1);
+            &::placeholder {
+                color: black;
+                opacity: 0.8;
+            }
+        } */
+    }
+
+    .loader {
+        margin-bottom: -27px;
+    }
+
+    @media (max-width: 767.98px) {
+        padding: 60px 0 10px;
+    }
+}

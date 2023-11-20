@@ -1,0 +1,29 @@
+footer {
+    padding: 20px 0 20px;
+    font-weight: 300;
+    font-size: 15px;
+    letter-spacing: 0.2px;
+
+
+    .flex {
+        >div {
+            width: calc(33.33% - 1.25rem);
+
+            @media (max-width: 767.98px) {
+                width: 100%;
+
+                &:not(:last-of-type) {
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+
+
+    .credits {
+        svg {
+            display: inline-block;
+            margin: -4px 3px 0 3px;
+        }
+    }
+}
