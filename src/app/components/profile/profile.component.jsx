@@ -9,6 +9,7 @@ import style from "./profile.style.module.scss"
 
 const Profile = ({ details }) => {
     const { name, image } = details;
+    console.log(details);
     return (
         <div className={`${ style.profile } flex flex-wrap justify-center`}>
             <Image className="mb-3" src={ image } width={96} height={96} alt={ name } />

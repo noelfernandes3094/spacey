@@ -34,6 +34,11 @@ const nextConfig = {
                 protocol: 'https',
                 hostname: 'live.staticflickr.com',
                 port: '',
+            },
+            {
+                protocol: 'https',
+                hostname: 'media.licdn.com',
+                port: '',
             }
         ],
     },

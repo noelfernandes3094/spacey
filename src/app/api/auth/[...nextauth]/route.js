@@ -10,9 +10,21 @@ export const authOptions = {
         LinkedInProvider({
             clientId: process.env.LINKEDIN_CLIENT_ID,
             clientSecret: process.env.LINKEDIN_CLIENT_SECRET,
-            /* authorization: {
-                params: { scope: "openid profile email" }
-            } */
+            authorization: {
+                params: { scope: "openid profile email" },
+            },
+            issuer: 'https://www.linkedin.com',
+            jwks_endpoint: 'https://www.linkedin.com/oauth/openid/jwks',
+            profile(profile, tokens) {
+                const defaultImage =
+                'https://cdn-icons-png.flaticon.com/512/174/174857.png';
+                return {
+                    id: profile.sub,
+                    name: profile.name,
+                    email: profile.email,
+                    image: profile.picture ?? defaultImage,
+                };
+            },
         }),
         GoogleProvider({
             clientId: process.env.GOOGLE_CLIENT_ID,
@@ -38,6 +50,7 @@ export const authOptions = {
         //newUser: '/auth/new-user' // New users will be directed here on first sign in (leave the property out if not of interest)
     }
 }
+
 const handler = NextAuth(authOptions);
 
 
